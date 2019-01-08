@@ -46,7 +46,7 @@ export class ListarPage implements OnInit{
       }
     );
   }
-  editMenu(item){
+  editar(item){
     this.navCtrl.push(ActualizarPage,{persona:item} )
   }
 
