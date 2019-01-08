@@ -7,12 +7,18 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { ListarPage } from '../pages/listar/listar';
 import { ActualizarPage } from '../pages/actualizar/actualizar';
+import { BorrarPage} from '../pages/borrar/borrar';
+import { CrearPage} from '../pages/crear/crear';
+import { NotfoundPage} from '../pages//notfound/notfound';
 
 @NgModule({
   declarations: [
     MyApp,
     ListarPage,
-    ActualizarPage
+    ActualizarPage,
+    BorrarPage,
+    CrearPage,
+    NotfoundPage,
   ],
   imports: [
     BrowserModule,
@@ -22,7 +28,10 @@ import { ActualizarPage } from '../pages/actualizar/actualizar';
   entryComponents: [
     MyApp,
     ListarPage,
-    ActualizarPage
+    ActualizarPage,
+    BorrarPage,
+    CrearPage,
+    NotfoundPage,
   ],
   providers: [
     StatusBar,

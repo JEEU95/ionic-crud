@@ -4,13 +4,16 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { ListarPage } from '../pages/listar/listar';
+import { BorrarPage} from '../pages/borrar/borrar';
+import { CrearPage} from '../pages/crear/crear';
+import { NotfoundPage} from '../pages//notfound/notfound';
 
 import { ActualizarPage } from '../pages/actualizar/actualizar';
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = ActualizarPage;
+  rootPage:any = BorrarPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
