@@ -6,11 +6,13 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { ListarPage } from '../pages/listar/listar';
+import { ActualizarPage } from '../pages/actualizar/actualizar';
 
 @NgModule({
   declarations: [
     MyApp,
-    ListarPage
+    ListarPage,
+    ActualizarPage
   ],
   imports: [
     BrowserModule,
@@ -19,7 +21,8 @@ import { ListarPage } from '../pages/listar/listar';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    ListarPage
+    ListarPage,
+    ActualizarPage
   ],
   providers: [
     StatusBar,

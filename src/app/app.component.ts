@@ -4,11 +4,13 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { ListarPage } from '../pages/listar/listar';
+
+import { ActualizarPage } from '../pages/actualizar/actualizar';
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = ListarPage;
+  rootPage:any = ActualizarPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
