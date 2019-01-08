@@ -48,10 +48,12 @@ export class ListarPage implements OnInit{
     );
   }
   editar(item){
+    console.log(item);
+    console.log("Datos****")
     this.navCtrl.push(ActualizarPage,{persona:item} )
   }
   agregar(){
-    this.navCtrl.push(CrearPage)
+    this.navCtrl.push(CrearPage)  
   }
 
 }

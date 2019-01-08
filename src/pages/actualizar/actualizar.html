@@ -9,28 +9,23 @@
 
 
 <ion-content padding>
-    <ion-item>
 
-        <ion-label fixed>Id de la persona a modificar</ion-label>
-        <ion-input type="text" value="" placeholder=":"></ion-input>
-    </ion-item>
-    <ion-item>
+    <form  #updateForm="ngForm" (ngSubmit)="onSubmit(updateForm)">
+        <ion-item>
+                
+            <ion-label>Nombre</ion-label>
+            <ion-input type="text" [ngModelOptions]="{standalone: true}" placeholder="Nombre" #nombre="ngModel" [(ngModel)]="update.nombre"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Apellidos</ion-label>
+            <ion-input type="text" [ngModelOptions]="{standalone: true}" placeholder="Apellidos" #apellidos="ngModel" [(ngModel)]="update.apellidos"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Telefono</ion-label>
+            <ion-input type="text" [ngModelOptions]="{standalone: true}" #telefono="ngModel" [(ngModel)]="update.telefono" placeholder="Telefono"></ion-input>
+        </ion-item>
+        <button ion-button type="submit" class="btn btn-secondary">Actualizar Datos</button>
+    </form> 
 
-        <ion-label fixed>Nombre</ion-label>
-        <ion-input type="text" value="" placeholder=":"></ion-input>
-    </ion-item>
-    <ion-item>
-
-        <ion-label fixed>Apellidos</ion-label>
-        <ion-input type="text" value="" placeholder=":"></ion-input>
-    </ion-item>
-    <ion-item>
-
-        <ion-label fixed>Telefono</ion-label>
-        <ion-input type="text" value="" placeholder=":"></ion-input>
-    </ion-item>
-    
-            <button type="submit" ion-button color="secondary">Actualizar Datos</button>
-      
 </ion-content>
 
