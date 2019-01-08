@@ -13,7 +13,7 @@ import { ActualizarPage } from '../pages/actualizar/actualizar';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = BorrarPage;
+  rootPage:any = CrearPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
