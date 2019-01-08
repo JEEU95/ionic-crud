@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { PeticionesService } from '../../services/peticiones.service';
 import { ActualizarPage } from '../actualizar/actualizar';
+import { CrearPage } from '../crear/crear';
 /**
  * Generated class for the ListarPage page.
  *
@@ -48,6 +49,9 @@ export class ListarPage implements OnInit{
   }
   editar(item){
     this.navCtrl.push(ActualizarPage,{persona:item} )
+  }
+  agregar(){
+    this.navCtrl.push(CrearPage)
   }
 
 }
