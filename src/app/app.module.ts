@@ -10,6 +10,7 @@ import { ActualizarPage } from '../pages/actualizar/actualizar';
 import { BorrarPage} from '../pages/borrar/borrar';
 import { CrearPage} from '../pages/crear/crear';
 import { NotfoundPage} from '../pages//notfound/notfound';
+import { HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { NotfoundPage} from '../pages//notfound/notfound';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],

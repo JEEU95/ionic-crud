@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { PeticionesService } from '../../services/peticiones.service';
+import { ActualizarPage } from '../actualizar/actualizar';
 /**
  * Generated class for the ListarPage page.
  *
@@ -12,14 +13,42 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 @Component({
   selector: 'page-listar',
   templateUrl: 'listar.html',
+  providers:[ PeticionesService ]
 })
-export class ListarPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+export class ListarPage implements OnInit{
+  public personas: any;
+  public delete: any;
+  constructor(public navCtrl: NavController, public navParams: NavParams, private _peticionesService: PeticionesService) {
+    this.delete={
+      "id" : ""
+    }
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ListarPage');
+  ngOnInit() {
+    this._peticionesService.getPersonas().subscribe(
+      result=> {
+        this.personas=result;
+        console.log(this.personas);
+    },
+    error=>{
+      console.log(<any>error)
+    });
+  }
+
+  borrar(item){
+    console.log(item)
+    this._peticionesService.deletePersona(item.id).subscribe(
+      response=>{
+        alert(response.respuesta);
+      },
+      error=>{
+        console.log(<any>error);
+      }
+    );
+  }
+  editMenu(item){
+    this.navCtrl.push(ActualizarPage,{persona:item} )
   }
 
 }
+

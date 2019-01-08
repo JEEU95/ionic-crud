@@ -7,17 +7,22 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-item>
-    <h2>id</h2>
-    <h3>nombre apellidos</h3>
-    <p>telefono</p>
-  </ion-item>
-  <ion-item>
-    <h2>id</h2>
-    <h3>nombre apellidos</h3>
-    <p>telefono</p>
-  </ion-item>
+    <tbody *ngFor="let item of personas">
+
+      <ion-item>
+          <h2>{{item.id}}</h2>
+          <h3>{{item.nombre}}</h3>
+          <p>{{item.telefono}}</p>
+          <button ion-button color="danger" (click)="borrar(item)">
+              <ion-icon name="trash"></ion-icon>
+              Eliminar
+            </button>
+         
+          <button ion-button color="secondary">Editar</button>
+      </ion-item>
+    </tbody>
+
   <div padding>
-    <button ion-button color="secondary">Listar</button>
+    <button ion-button color="secondary">Agregar Persona</button>
   </div>
 </ion-content>
